@@ -1,0 +1,297 @@
+<!-- 
+    Assignment 07:   Using Functions in JavaScript
+    Objective: :  To understand and implement JavaScript built-in functions by displaying and interacting with alert,
+confirm, and prompt dialog boxes.
+
+    Task:: Create a simple webpage that uses JavaScript to:
+● Display an alert box with a welcome message.
+● Show a confirm box asking the user for a decision and handle the response.
+● Display a prompt box to collect user input and show the entered value on the page.
+    Course: VSEC-101-CA: HTML and Webpage Designing
+    College: APIMR, Landewadi
+    University: Savitribai Phule Pune University
+	
+	
+	
+	<!DOCTYPE html>
+<html>
+<head>
+    <!-- The <head> section contains metadata and the title of the page -->
+    <title>Creating Lists in HTML</title>
+	
+</head>
+ 
+
+<body bgcolor="#f5fcff" text="#000000"> <!-- Sets a light background color and black text -->
+ 
+    <!-- Heading section -->
+    <h1 align="center">Creating Lists in HTML</h1>
+    <h2 align="center">Savitribai Phule Pune University</h2>
+    <h3 align="center">Course: VSEC-101-CA: HTML and Webpage Designing</h3>
+    <hr color="blue" size="3">
+	
+	
+	<!-- Question 1 -->
+	
+<h2> Question 1: Create alert box game using Internal Script </h2>
+Example:
+<script type="text/JavaScript">
+function Hello(){
+ alert("Hello, World");
+ }
+</script>
+<body>
+ <input type="button" onclick="Hello();" name="ok" value="Click Me" />
+</body>
+</html>
+
+<h2> student acitivity </h2>
+
+    <div class="button-container">
+        <button class="blue" onclick="showAlert('Blue')">Blue</button>
+        <button class="black" onclick="showAlert('Black')">Black</button>
+        <button class="red" onclick="showAlert('Red')">Red</button>
+    </div>
+
+    <script>
+        function showAlert(color) {
+            alert(color + " color was clicked!");
+        }
+    </script>
+
+</body>
+</html>
+
+<!--Question 2-->
+
+<h2>Question 2: Create alert box game using external script</h2>
+Example:
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+    <h2>Alert Box Game</h2>
+    <!-- Button that calls the Hello() function when clicked -->
+    <input type="button" onclick="Hello();" name="ok" value="Click Me" />
+</body>
+</html>
+
+<h2> student acitivity </h2>
+   </style>
+</head>
+<body>
+
+<div class="console">
+    <button onclick="showAlert('Up')">Up</button>
+    <button onclick="showAlert('Left')">Left</button>
+    <button onclick="showAlert('Right')">Right</button>
+    <button onclick="showAlert('Down')">Down</button>
+    <button onclick="showAlert('Enter')">Enter</button>
+</div>
+
+<script>
+    function showAlert(action) {
+        alert(action + " button pressed!");
+    }
+</script>
+
+</body>
+</html>
+
+<!--Question 3-->
+ <h2>Question 3: Display personal information using JavaScript</h2>
+Example: Display “Hello World!”
+<body>
+<p id="demo"></p>
+<script>
+document.getElementById("demo").innerHTML = "Hello World!";
+</script>
+</body>
+</html>
+
+<h2> student acitivity </h2>
+</style>
+</head>
+<body>
+
+<h2>Personal Information</h2> 
+<table>
+    <thead>
+        <tr>
+            <th>Attribute</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+    </tbody>
+</table>
+<script>
+const name = "sakshi shewale";
+const studentClass = "BCA 2025";
+const collegeName = "Adhalrao Patil Institute of Management and Research, Landewadi";
+const bestFriend = "Vedant joshi";
+const favoriteSubject = "HTML and Webpage designing";
+document.write("<table border='1'><tr><td>Name:</td><td>" + name + "</td></tr><tr><td>Class:</td><td>" + studentClass + "</td></tr><tr><td>Collage Name:</td><td>" + collegeName + "</td></tr><tr><td>Name of your best friend:</td><td>" + bestFriend + "</td></tr><tr><td>Favorite Subject:</td><td>" + favoriteSubject + "</td></tr></table>");
+</script>
+</body>
+</html>
+
+<!--Question 4-->
+Question 4: Change background color using JavaScript
+Example: Change background color to Yellow
+<body>
+<input type="button" value="Yellow" onclick="changeColor()">
+<script>
+function changeColor()
+{
+ document.body.style.backgroundColor = "yellow";
+}
+</script>
+</body>
+</html>
+
+<h2> student acitivity </h2>
+  </style>
+</head>
+<body>
+
+  <div class="button-container">
+    <button class="green" onclick="changeBackgroundColor('green')">Green</button>
+    <button class="pink" onclick="changeBackgroundColor('pink')">Pink</button>
+    <button class="blue" onclick="changeBackgroundColor('blue')">Blue</button>
+  </div>
+
+  <script>
+    function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>
+
+<!--Question 5-->
+Question 5: Simple calculator using JavaScript
+Example: Add two numbers and display result.
+<body>
+Enter First Number: <input type="text" id="n1"><br><br>
+Enter Second Number: <input type="text" id="n2"><br><br>
+<input type="button" value="Add" onclick="add()">
+<p id="result"></p>
+<script>
+function add()
+{
+ var a = parseInt(document.getElementById("n1").value);
+ var b = parseInt(document.getElementById("n2").value);
+ document.getElementById("result").innerHTML = "Result = " + (a + b);
+}
+</script>
+</body>
+</html>
+
+<h2> student acitivity </h2>
+</style>
+</head>
+<body>
+
+  <div class="calculator">
+    <input type="text" class="display" id="display" disabled />
+    <div class="buttons">
+      <button onclick="appendNumber(7)">7</button>
+      <button onclick="appendNumber(8)">8</button>
+      <button onclick="appendNumber(9)">9</button>
+      <button class="operator" onclick="setOperator('+')">+</button>
+
+      <button onclick="appendNumber(4)">4</button>
+      <button onclick="appendNumber(5)">5</button>
+      <button onclick="appendNumber(6)">6</button>
+      <button class="operator" onclick="setOperator('-')">-</button>
+
+      <button onclick="appendNumber(1)">1</button>
+      <button onclick="appendNumber(2)">2</button>
+      <button onclick="appendNumber(3)">3</button>
+      <button class="operator" onclick="setOperator('*')">*</button>
+
+      <button onclick="appendNumber(0)">0</button>
+      <button onclick="clearDisplay()" class="clear">C</button>
+      <button class="equal" onclick="calculateResult()">=</button>
+      <button class="operator" onclick="setOperator('/')">/</button>
+    </div>
+  </div>
+
+  <script>
+    let currentInput = '';
+    let operator = '';
+    let firstNumber = null;
+    let secondNumber = null;
+
+    // Append a number to the current input
+    function appendNumber(number) {
+      currentInput += number;
+      updateDisplay();
+    }
+
+    // Set the operator for the calculation
+    function setOperator(op) {
+      if (currentInput === '') return;
+      if (firstNumber === null) {
+        firstNumber = parseFloat(currentInput);
+      } else {
+        secondNumber = parseFloat(currentInput);
+      }
+      operator = op;
+      currentInput = '';
+    }
+
+    // Clear the display
+    function clearDisplay() {
+      currentInput = '';
+      firstNumber = null;
+      secondNumber = null;
+      operator = '';
+      updateDisplay();
+    }
+
+    // Calculate the result based on the operator
+    function calculateResult() {
+      if (firstNumber === null || currentInput === '') return;
+
+      secondNumber = parseFloat(currentInput);
+
+      let result;
+      switch (operator) {
+        case '+':
+          result = firstNumber + secondNumber;
+          break;
+        case '-':
+          result = firstNumber - secondNumber;
+          break;
+        case '*':
+          result = firstNumber * secondNumber;
+          break;
+        case '/':
+          if (secondNumber === 0) {
+            alert('Error: Division by zero!');
+            return;
+          }
+          result = firstNumber / secondNumber;
+          break;
+        default:
+          return;
+      }
+
+      currentInput = result.toString();
+      firstNumber = null;
+      secondNumber = null;
+      operator = '';
+      updateDisplay();
+    }
+
+    // Update the display with the current input
+    function updateDisplay() {
+      document.getElementById('display').value = currentInput;
+    }
+  </script>
+
+</body>
+</html>
